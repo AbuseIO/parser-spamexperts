@@ -5,7 +5,7 @@ namespace AbuseIO\Parsers;
 class Spamexperts extends Parser
 {
     /**
-     * Create a new Blocklistde instance
+     * Create a new Spamexperts instance
      */
     public function __construct($parsedMail, $arfMail)
     {
