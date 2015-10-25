@@ -20,7 +20,10 @@ return [
             'type'      => 'Abuse',
             'enabled'   => true,
             'fields'    => [
-                //
+                'Arrival-Date',
+                'Authentication-Results',
+                'Source-IP',
+                '',
             ],
             'filters'    => [
                 //
