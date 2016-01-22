@@ -33,10 +33,12 @@ class Spamexperts extends Parser
 
             // If feed is known and enabled, validate data and save report
             if ($this->isKnownFeed() && $this->isEnabledFeed()) {
+                // To get some more consitency, remove "\r" from the report.
+                $this->arfMail['report'] = str_replace("\r", "", $this->arfMail['report']);
 
                 // Build up the report
                 preg_match_all(
-                    "/([\w\-]+): (.*)[ ]*\r?\n?\r\n/m",
+                    "/([\w\-]+): (.*)[ ]*\n/m",
                     $this->arfMail['report'],
                     $matches
                 );
@@ -45,7 +47,6 @@ class Spamexperts extends Parser
 
                 // Sanity check
                 if ($this->hasRequiredFields($report) === true) {
-
                     // Grap the domain and user from the authentication results for contact lookup (byDomain)
                     preg_match(
                         "/smtp.auth=(?<user>.*)@(?<domain>.*)/m",
