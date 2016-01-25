@@ -17,7 +17,7 @@ return [
     'feeds' => [
         'default' => [
             'class'     => 'SPAM',
-            'type'      => 'Abuse',
+            'type'      => 'ABUSE',
             'enabled'   => true,
             'fields'    => [
                 'Arrival-Date',
