@@ -68,7 +68,8 @@ class Spamexperts extends Parser
                     $incident->source      = config("{$this->configBase}.parser.name");
                     $incident->source_id   = false;
                     $incident->ip          = $report['Source-IP'];
-                    $incident->domain      = getDomain($report['Source-Domain']);
+                    $incident->domain      =
+                        empty($report['Source-Domain']) ? false : getDomain($report['Source-Domain']);
                     $incident->uri         = false;
                     $incident->class       = config("{$this->configBase}.feeds.{$this->feedName}.class");
                     $incident->type        = config("{$this->configBase}.feeds.{$this->feedName}.type");
