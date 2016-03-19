@@ -70,7 +70,6 @@ class Spamexperts extends Parser
                     $incident->ip          = $report['Source-IP'];
                     $incident->domain      =
                         empty($report['Source-Domain']) ? false : getDomain($report['Source-Domain']);
-                    $incident->uri         = false;
                     $incident->class       = config("{$this->configBase}.feeds.{$this->feedName}.class");
                     $incident->type        = config("{$this->configBase}.feeds.{$this->feedName}.type");
                     $incident->timestamp   = strtotime($report['Arrival-Date']);
