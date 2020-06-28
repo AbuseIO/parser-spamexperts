@@ -1,7 +1,7 @@
 {
     "name": "abuseio/parser-spamexperts",
     "description": "Parser addon for handling notifications from spamexperts",
-    "version": "3.0.0",
+    "version": "3.0.3",
     "keywords": ["laravel", "abuseio", "parser", "spamexperts"],
     "homepage": "http://abuse.io",
     "type": "library",
